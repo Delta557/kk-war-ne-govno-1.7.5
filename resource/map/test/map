@@ -201,7 +201,7 @@
 	}
 	{Human "mp2/frg/frg_rpg2" 0x5804
 		{Position 37.42 -2150.19}
-		{xform zl 54.71 y 10.43 zw 16.59}
+		{xform zl 56.49 y 10.43 zw 16.59}
 		{Extender "vitality"
 			{Dead}
 			{Health
@@ -10273,6 +10273,7 @@
 	{Entity "su-25sm_miner" 0x6011
 		{Position -942.36 2390.22}
 		{xform zl 154.91 y 19.72 zw -156.27}
+		{SpawnedInFog}
 		{Volume "steering_eler_l"
 			{able {contact 0}{contact_ground 0}}
 		}
@@ -10358,8 +10359,8 @@
 		}
 	}
 	{Human "single/est/est_com" 0x6013
-		{Position -890.97 2373.36}
-		{xform zl 163.12 y 18.62 zw -164.95}
+		{Position -889.02 2429.68}
+		{xform zl 151.57 y 20.33 zw -152.71}
 		{Player 0}
 		{MID 10010}
 		{NameId 0 1}
@@ -10373,6 +10374,7 @@
 	{Entity "9s18_kupol" 0x92f
 		{Position 2347.18 1022.31}
 		{xform zl -177.62}
+		{SpawnedInFog}
 		{Placer
 			{State "driver" {Disable}}
 			{State "seat4" {Disable}}
@@ -10442,6 +10444,7 @@
 	{Entity "buk_m2" 0x2082
 		{Position 2341.83 1213.33}
 		{xform zl -167.51}
+		{SpawnedInFog}
 		{Extender "enumerator"
 			{number 588}
 		}
@@ -10600,23 +10603,13 @@
 			{Item "ak74b" filled}
 		}
 	}
-	{Entity "radar_minimap" 0x5800
-		{Position 2347.18 1022.31 310.67}
-		{DisableObstacles}
-		{Player 0}
-		{MID 10028}
-	}
 	{Entity "piece_big_airborne_wing" 0x5806
 		{Position -4629.33 -844.27 302.22}
 		{xform zl 147.04 y 179.71 zw -110.72}
-		{TexMod "vksred10"}
-		{Volume "target_hight"
-			{able {visible 0}{throwing 0}{obstacle 0}{blast 0}{select 0}}
-		}
 	}
 	{Entity "su-25sm_miner" 0x1807
 		{Position -2468.53 -457.3}
-		{xform zl 165.24 y 0.1 zw -165.24}
+		{xform zl 165.22 y 0.1 zw -165.22}
 		{Volume "steering_eler_l"
 			{able {contact 0}{contact_ground 0}}
 		}
@@ -10694,7 +10687,7 @@
 	}
 	{Human "mp2/usa/2smg_gren" 0x1809
 		{Position -2422.76 -458.3}
-		{xform zl 165.24 y 0.1 zw -165.24}
+		{xform zl 165.22 y 0.1 zw -165.22}
 		{Player 1}
 		{MID 10031}
 		{NameId 26 12}
@@ -10703,6 +10696,84 @@
 	{Entity "m4s" 0x180b
 		{Extender "stuff"
 			{Item "m4s" filled}
+		}
+	}
+	{Entity "f-16c_antirad" 0x208a
+		{Position 7560.72 5724.73}
+		{xform zl -166.71 y 1.73 zw 74.75}
+		{SpawnedInFog}
+		{Extender "enumerator"
+			{number 354}
+		}
+		{Player 0}
+		{MID 10035}
+		{Component "flare_fly_l"
+			{State broken}
+		}
+		{Component "flare_fly_r"
+			{State broken}
+		}
+		{Component "chaff_fly_l"
+			{State broken}
+		}
+		{Component "chaff_fly_r"
+			{State broken}
+		}
+	}
+	{Entity "cwps3_proj_point" 0x208b
+		{Player 255}
+		{MID 10036}
+		{Component "rus_active"
+			{State broken}
+		}
+		{Component "rus_antiship"
+			{State broken}
+		}
+		{Component "rus_ir"
+			{State broken}
+		}
+		{Component "rus_laser"
+			{State broken}
+		}
+		{Component "rus_laser_spot"
+			{State broken}
+		}
+		{Component "rus_other"
+			{State broken}
+		}
+		{Component "rus_radpassive"
+			{State broken}
+		}
+		{Component "usa_active"
+			{State broken}
+		}
+		{Component "usa_antiship"
+			{State broken}
+		}
+		{Component "usa_ir"
+			{State broken}
+		}
+		{Component "usa_laser"
+			{State broken}
+		}
+		{Component "usa_other"
+			{State broken}
+		}
+		{Component "usa_radpassive"
+			{State broken}
+		}
+	}
+	{Human "mp2/usa/pilot" 0x208c
+		{Position 7557.28 5635.59}
+		{xform zl -178.62 y 16.69 zw 86.71}
+		{Player 0}
+		{MID 10037}
+		{NameId 90 0}
+		{LastItem "m4"}
+	}
+	{Entity "m4empy" 0x208e
+		{Extender "stuff"
+			{Item "m4" filled}
 		}
 	}
 	{Link 0x16 {0x4 "station_corner9"}}
@@ -10718,21 +10789,23 @@
 	{Link 0x4003 {0x4002 "point"}}
 	{Link 0x6012 {0x6011 "cwps_proj_point"}}
 	{Link 0x6013 {0x6011 "driver"}}
+	{Link 0x6800 {0x92f "seat3"}}
+	{Link 0xc01 {0x92f "commander"}}
+	{Link 0x2800 {0x92f "charger"}}
+	{Link 0x7000 {0x92f "commander2"}}
 	{Link 0x930 {0x92f "vehicle9"}}
 	{Link 0x932 {0x92f "cwps_proj_point"}}
-	{Link 0xc01 {0x92f "commander"}}
-	{Link 0x6800 {0x92f "seat3"}}
-	{Link 0x7000 {0x92f "commander2"}}
-	{Link 0x2800 {0x92f "charger"}}
 	{Link 0x931 {0x930 "point"}}
+	{Link 0x3000 {0x2082 "driver"}}
+	{Link 0x1004 {0x2082 "commander"}}
+	{Link 0x4800 {0x2082 "charger"}}
 	{Link 0x2083 {0x2082 "vehicle9"}}
 	{Link 0x2088 {0x2082 "cwps_proj_point"}}
-	{Link 0x1004 {0x2082 "commander"}}
-	{Link 0x3000 {0x2082 "driver"}}
-	{Link 0x4800 {0x2082 "charger"}}
 	{Link 0x2087 {0x2083 "point"}}
 	{Link 0x1808 {0x1807 "cwps_proj_point"}}
 	{Link 0x1809 {0x1807 "driver"}}
+	{Link 0x208b {0x208a "cwps_proj_point"}}
+	{Link 0x208c {0x208a "driver"}}
 	{Inventory 0x5804
 		{box
 			{clear}
@@ -11034,6 +11107,22 @@
 			{item "nato_pg" "cm" "ammo" {cell 5 7}}
 			{item "sandbag_kit" {cell 6 7}}
 			{item "ech_helmet" {cell 0 8}{user "head"}}
+		}
+	}
+	{Inventory 0x208c
+		{box
+			{clear}
+			{item "lpsv_us_pilot" {cell 0 0}}
+			{item "beretta92" filled {cell 4 0}}
+			{item "standart" "ammo" 45 {cell 4 1}}
+			{item 0x208e {cell 0 4}}
+			{item "556nato" "ammo" 30 {cell 6 0}}
+			{item "556nato" "ammo" 30 {cell 6 1}}
+			{item "556nato" "ammo" 30 {cell 4 2}}
+			{item "bandage" 5 {cell 5 2}}
+			{item "bandage" 5 {cell 4 3}}
+			{item "bandage" 5 {cell 4 4}}
+			{item "hgu55_plane" {cell 4 5}{user "head"}}
 		}
 	}
 }
